@@ -22,15 +22,12 @@ function getComputerChoice ()
 
 function getUserChoice(userInput)
 {
-    /* userInput=userInput.toLowercase(); */
+    
     userInput= prompt("enter your choice")
+    if (userInput === "rock" || userInput ==="paper" || userInput ==="scissor")
     {
         return userInput;
     }
-    /* if (userInput === "rock" || userInput ==="paper" || userInput ==="scissor")
-    {
-        return userInput;
-    } */
 
 
 }
@@ -61,11 +58,11 @@ function playRound(PlayerSelection,computerSelection)
     }
     if (playerSelection ==="paper" && computerSelection ===" scissor")
     {
-        return("computer won !!!")
+        return("computer won !!!");
     }
-    else if (playerSelection = computerSelection)
+    else if (playerSelection === computerSelection)
     {
-        return(" match draw")
+        return(" match draw");
     }
 
     
@@ -77,11 +74,6 @@ const playerSelection = getUserChoice();
 const computerSelection= getComputerChoice();
 console.log(playRound(playerSelection,computerSelection));
 
-
-
-/* const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection)) */
 
 
   
