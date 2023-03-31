@@ -20,28 +20,70 @@ function getComputerChoice ()
     
 }
 
+function getUserChoice(userInput)
+{
+    /* userInput=userInput.toLowercase(); */
+    userInput= prompt("enter your choice")
+    {
+        return userInput;
+    }
+    /* if (userInput === "rock" || userInput ==="paper" || userInput ==="scissor")
+    {
+        return userInput;
+    } */
+
+
+}
+
+
 
 function playRound(PlayerSelection,computerSelection)
 {
-    if(PlayerSelection === "rock" && computerSelection === "paper")
+    if(PlayerSelection === "rock" && computerSelection === "scissor" )
     {
-        return(' paper beat rock');
+        return(' rock beat scissor');
     }
-    else if(PlayerSelection ==="paper" && computerSelection ===" scissor")
+    if(playerSelection ==="scissor" && computerSelection==="rock")
+    {
+        return ('computer won!')
+    }
+    if (PlayerSelection ==="paper" && computerSelection ==="rock")
+    {
+        return("paper beat rock");
+    }
+    if ( playerSelection ==="rock" && computerSelection ==="paper")
+    {
+        return ("computer won!!");
+    }
+    if (PlayerSelection ==="scissor" && computerSelection === "paper")
     {
         return("scissor beat paper");
     }
-    else(PlayerSelection ==="scissor" && computerSelection === " rock")
+    if (playerSelection ==="paper" && computerSelection ===" scissor")
     {
-        return("rock beat scissor");
+        return("computer won !!!")
+    }
+    else if (playerSelection = computerSelection)
+    {
+        return(" match draw")
     }
 
+    
 }
-  
-const playerSelection = "rock";
+
+
+    
+const playerSelection = getUserChoice();
+const computerSelection= getComputerChoice();
+console.log(playRound(playerSelection,computerSelection));
+
+
+
+/* const playerSelection = "rock";
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection))
-  
+console.log(playRound(playerSelection, computerSelection)) */
+
+
   
   
   
